@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Landmarks`,
-    description: `American Landmarks, National parks, Mountains, and Rivers.`,
+    description: `American Landmarks, National Parks, Mountains, and Rivers.`,
     author: `Mario Moreno`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
