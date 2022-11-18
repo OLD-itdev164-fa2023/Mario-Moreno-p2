@@ -14,7 +14,6 @@ import styled, { ThemeProvider } from "styled-components"
 const Content = styled.div`
   margin: 0 auto;
   max-width: var(--size-content);
-  padding: var(--size-gutter);
 `
 
 const Layout = ({ children }) => {

@@ -10,6 +10,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -17,7 +18,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    `gatsby-plugin-image`,
+
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
