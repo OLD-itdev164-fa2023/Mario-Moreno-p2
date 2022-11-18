@@ -27,7 +27,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allContentfulLandmark(sort: { category: ASC }) {
+    allContentfulLandmark {
       edges {
         node {
           id
