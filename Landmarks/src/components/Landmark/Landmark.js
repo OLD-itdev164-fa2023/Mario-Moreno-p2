@@ -14,7 +14,13 @@ const Name = styled(Text)`
 
 export const Landmark = ({ edge }) => {
   return (
-    <Card>
+    <Card
+      sx={{
+        backgroundColor: "white",
+        padding: ".5em",
+        borderRadius: "5px",
+      }}
+    >
       <Link to={edge.node.slug}>
         <Image image={getImage(edge.node.image)} alt={edge.node.name} />
       </Link>
