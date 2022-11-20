@@ -4,19 +4,29 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Landmark } from "../components/Landmark"
+import styled from "styled-components"
+import { Box } from "rebass"
+
+const Grid = styled(Box)`
+  box-sizing: border-box;
+  display: grid;
+  row-gap: 1.5em;
+  column-gap: 30px;
+  padding: 1.5rem;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+`
 
 const IndexPage = ({ data }) => {
   const landmarks = data.allContentfulLandmark.edges
-  console.log(landmarks)
-
   return (
     <Layout>
       <HeroImage />
-      <div>
+      <Grid>
         {landmarks.map(edge => {
           return <Landmark edge={edge} key={edge.node.id} />
         })}
-      </div>
+      </Grid>
     </Layout>
   )
 }

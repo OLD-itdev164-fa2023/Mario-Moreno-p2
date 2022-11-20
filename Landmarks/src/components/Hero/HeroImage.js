@@ -30,13 +30,11 @@ export const HeroImage = () => {
       }
     }
   `)
+  const img = data.allContentfulLandmark.edges[0].node.image.gatsbyImageData
 
   return (
     <Hero>
-      <Image
-        image={data.allContentfulLandmark.edges[0].node.image.gatsbyImageData}
-        alt={data.allContentfulLandmark.edges[0].node.name}
-      />
+      <Image image={img} alt={data.allContentfulLandmark.edges[0].node.name} />
     </Hero>
   )
 }

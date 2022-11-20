@@ -1,5 +1,5 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { Card, Text } from "rebass"
@@ -14,9 +14,9 @@ const Name = styled(Text)`
 
 export const Landmark = ({ edge }) => {
   return (
-    <Card width={250}>
+    <Card>
       <Link to={edge.node.slug}>
-        <Image image={edge.node.image.gatsbyImageData} alt={edge.node.name} />
+        <Image image={getImage(edge.node.image)} alt={edge.node.name} />
       </Link>
       <Name>{edge.node.name}</Name>
     </Card>
