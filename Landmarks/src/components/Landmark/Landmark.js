@@ -21,7 +21,7 @@ export const Landmark = ({ edge }) => {
         borderRadius: "5px",
       }}
     >
-      <Link to={edge.node.slug}>
+      <Link to={`/landmark/${edge.node.slug}`}>
         <Image image={getImage(edge.node.image)} alt={edge.node.name} />
       </Link>
       <Name>{edge.node.name}</Name>

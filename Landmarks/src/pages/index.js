@@ -13,7 +13,6 @@ const Grid = styled(Box)`
   row-gap: 1.5em;
   column-gap: 20px;
   padding: 1.5rem;
-
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   border-bottom: 1px solid #f0f0f9;

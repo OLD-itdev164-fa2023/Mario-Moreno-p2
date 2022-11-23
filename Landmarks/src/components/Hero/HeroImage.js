@@ -19,9 +19,17 @@ const Image = styled(GatsbyImage)`
 const FeaturedLandmarkName = styled(Text)`
   position: absolute;
   left: 30px;
-  bottom: 20px;
+  bottom: 40px;
   color: white;
   font-size: 2em;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+`
+const ParkName = styled(Text)`
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  color: white;
+  font-size: 1em;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 1);
 `
 
@@ -32,6 +40,7 @@ export const HeroImage = () => {
         edges {
           node {
             name
+            park
             image {
               gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
             }
@@ -42,11 +51,13 @@ export const HeroImage = () => {
   `)
   const img = data.allContentfulLandmark.edges[0].node.image.gatsbyImageData
   const name = data.allContentfulLandmark.edges[0].node.name
+  const park = data.allContentfulLandmark.edges[0].node.park
 
   return (
     <Hero>
       <Image image={img} alt={data.allContentfulLandmark.edges[0].node.name} />
       <FeaturedLandmarkName>{name}</FeaturedLandmarkName>
+      <ParkName>{park}</ParkName>
     </Hero>
   )
 }
