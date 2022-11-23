@@ -1,6 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { Box } from "rebass"
+import { MapView } from "../components/Map"
 
 export default function LandmarkDetails({ data }) {
   const {
@@ -9,11 +12,18 @@ export default function LandmarkDetails({ data }) {
     park,
     coordinates,
     state,
+
     description: { description },
   } = data.contentfulLandmark
-  console.log(coordinates)
   return (
     <Layout>
+      <Box>
+        <MapView center={coordinates} />
+        <GatsbyImage
+          image={data.contentfulLandmark.image.gatsbyImageData}
+          alt={data.contentfulLandmark.name}
+        />
+      </Box>
       <div>{name}</div>
       <div>{park}</div>
       <div>{city}</div>
