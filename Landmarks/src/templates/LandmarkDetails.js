@@ -23,15 +23,25 @@ const DetailsContainer = styled(Box)`
   padding-bottom: 1em;
 `
 const Name = styled(Heading)`
+  color: ${({ theme }) => theme.colors.brown};
+  font-weight: 400;
+  margin-bottom: 5px;
+`
+const About = styled(Heading)`
+  color: ${({ theme }) => theme.colors.brown};
   font-weight: 400;
   margin-bottom: 5px;
 `
 const Details = styled(Flex)`
-  font-size: 14px;
-  color: #6ea96e;
+  font-size: ${({ theme }) => theme.fontSizes[1]};
+  color: ${({ theme }) => theme.colors.green};
   justify-content: space-between;
   padding-bottom: 1em;
   border-bottom: 1px solid #f0f0f9;
+`
+const Description = styled(Box)`
+  font-size: ${({ theme }) => theme.fontSizes[0]};
+  color: ${({ theme }) => theme.colors.grey};
 `
 
 export default function LandmarkDetails({ data }) {
@@ -60,8 +70,8 @@ export default function LandmarkDetails({ data }) {
           <div>{state}</div>
         </Details>
         <Box sx={{ fontSize: "14px" }}>
-          <Name as="h2">About {name}</Name>
-          {description}
+          <About as="h2">About {name}</About>
+          <Description>{description}</Description>
         </Box>
       </DetailsContainer>
     </Layout>

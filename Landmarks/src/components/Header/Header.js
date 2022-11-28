@@ -1,12 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { Heading, Flex } from "rebass"
+import { Heading, Flex, Box } from "rebass"
 
 import { Link } from "gatsby"
 
 const Outer = styled.header`
-  background: var(--color-primary);
+  background: ${({ theme }) => theme.colors.blue};
   margin-bottom: 1.45rem;
   margin: 0 auto;
   padding: var(--space-2) var(--size-gutter);
@@ -35,10 +35,10 @@ const StyledLink = styled(Link)`
   font-family: var(--font-sans);
   text-decoration: none;
   &:hover {
-    color: lightgrey;
+    color: ${({ theme }) => theme.colors.lightBlue};
   }
 `
-const MediaQuery = styled.div`
+const MediaQuery = styled(Box)`
   @media (max-width: 510px) {
     display: none;
   }
@@ -53,8 +53,9 @@ const Header = ({ siteTitle }) => (
       <Nav>
         <MediaQuery>
           <StyledLink to="/">Home</StyledLink>
-          <StyledLink to="/about">About</StyledLink>
-          <StyledLink to="/contact">Contact</StyledLink>
+          <StyledLink to="/lakes">Lakes</StyledLink>
+          <StyledLink to="/mountains">Mountains</StyledLink>
+          <StyledLink to="/rivers">Rivers</StyledLink>
         </MediaQuery>
       </Nav>
     </Inner>
