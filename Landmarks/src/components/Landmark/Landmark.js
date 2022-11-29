@@ -10,6 +10,7 @@ const Image = styled(GatsbyImage)`
 const Name = styled(Text)`
   font-weight: 500;
   padding: 0.5em;
+  color: ${({ theme }) => theme.colors.brown};
 `
 
 export const Landmark = ({ edge }) => {
