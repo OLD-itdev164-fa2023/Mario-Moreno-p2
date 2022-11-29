@@ -11,7 +11,7 @@ const Content = styled.div`
 `
 const Link = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.brown};
+  color: ${({ theme }) => theme.colors.green};
 `
 
 const Layout = ({ children }) => {

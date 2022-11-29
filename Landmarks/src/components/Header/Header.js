@@ -9,7 +9,7 @@ import { Close } from "@styled-icons/ionicons-solid/Close"
 
 const Outer = styled.header`
   box-sizing: border-box;
-  background: ${({ theme }) => theme.colors.blue};
+  background: ${({ theme }) => theme.colors.green};
   margin-bottom: 1.45rem;
   margin: 0 auto;
   padding: var(--space-2) var(--size-gutter);
@@ -39,7 +39,7 @@ const StyledLink = styled(Link)`
   font-family: var(--font-sans);
   text-decoration: none;
   &:hover {
-    color: ${({ theme }) => theme.colors.lightBlue};
+    color: ${({ theme }) => theme.colors.limeGreen};
   }
 `
 const MediaQuery = styled(Box)`
@@ -56,16 +56,17 @@ const NavButton = styled(Box)`
     position: absolute;
     top: 15px;
     right: 20px;
+    cursor: pointer;
   }
 `
 const Logo = styled(Landscape)`
-  color: ${({ theme }) => theme.colors.lightBlue};
+  color: ${({ theme }) => theme.colors.limeGreen};
   cursor: pointer;
 `
 const MobileNav = styled(Flex)`
   flex-direction: column;
   justify-content: flex-start;
-  background-color: ${({ theme }) => theme.colors.blue};
+  background-color: ${({ theme }) => theme.colors.green};
   align-items: center;
   position: absolute;
   padding-top: 1.5em;
