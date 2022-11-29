@@ -5,8 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Text } from "rebass"
 
 const Hero = styled.section`
-  width: var(--space-content);
-  height: 300px;
+  width: 100%;
+  height: 500px;
   position: relative;
 `
 const Image = styled(GatsbyImage)`

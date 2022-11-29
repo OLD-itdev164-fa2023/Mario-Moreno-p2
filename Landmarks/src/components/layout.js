@@ -11,7 +11,7 @@ const Content = styled.div`
 `
 const Link = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.green};
+  color: ${({ theme }) => theme.colors.brown};
 `
 
 const Layout = ({ children }) => {
@@ -36,7 +36,6 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
             textAlign: "center",
             paddingBottom: "1em",
-            backgroundColor: `${({ theme }) => theme.colors.lightBlue}`,
           }}
         >
           © {new Date().getFullYear()} &middot; Built by:

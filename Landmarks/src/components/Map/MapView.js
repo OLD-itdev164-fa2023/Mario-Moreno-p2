@@ -5,7 +5,6 @@ import styled from "styled-components"
 const MapContainer = styled.section`
   width: 100%;
   height: 300px;
-  background-color: "#f1f1f1";
 `
 const containerStyle = {
   width: "100%",
