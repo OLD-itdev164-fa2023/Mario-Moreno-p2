@@ -21,6 +21,7 @@ const DetailsContainer = styled(Box)`
   padding: 0 1.5em;
   border-bottom: 1px solid #f0f0f9;
   padding-bottom: 1em;
+  margin-bottom: 2em;
 `
 const Name = styled(Heading)`
   color: ${({ theme }) => theme.colors.brown};
